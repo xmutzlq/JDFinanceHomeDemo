@@ -1,2 +1,3 @@
 # JDFinanceHomeDemo
-仿京东金融首页控件 better than JDFinance
+浜笢閲戣瀺棣栭〉鎺т欢Demo better than JDFinance
+<img src="https://github.com/xmutzlq/BezierCurveBgDemo/blob/master/assets/ezgif.com-video-to-gif.gif" width="600" height="1067" />
