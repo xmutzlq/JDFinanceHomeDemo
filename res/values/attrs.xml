@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <attr name="textSize" format="dimension"/>
+    <attr name="textColor" format="color" />
+    <attr name="dividerColor" format="color"/>
+    
+    <!-- 波浪背景 -->
+    <declare-styleable name="RadarWaveView">
+
+        <attr name="waveColor" format="color" />
+
+        <attr name="waveAmplitude" format="dimension" />
+
+        <attr name="waveSpeed" format="float" />
+
+        <attr name="waveStartPeriod" format="float" />
+        <attr name="waveStart" format="boolean" />
+
+        <attr name="waveFillTop" format="boolean" />
+        <attr name="waveFillBottom" format="boolean" />
+
+        <attr name="waveFillType" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+        </attr>
+
+        <attr name="waveType" format="enum">
+            <enum name="sin" value="0" />
+            <enum name="cos" value="1" />
+        </attr>
+
+    </declare-styleable>
+    
+    <!-- 金额刻度尺 -->
+    <declare-styleable name="slideruler">
+        <!--最小值-->
+        <attr name="s_min_value" format="integer"/>
+        <!--最大值-->
+        <attr name="s_max_value" format="integer"/>
+        <!--当前值-->
+        <attr name="s_current_value" format="integer"/>
+        <!--最小单位值-->
+        <attr name="min_unitValue" format="integer"></attr>
+        <!--最小当前值-->
+        <attr name="min_currentValue" format="integer"></attr>
+        <!--数值字体大小-->
+        <attr name="textSize" />
+        <!---数值字体颜色-->
+        <attr name="textColor" />
+        <!--底部和刻度的线颜色-->
+        <attr name="dividerColor" />
+        <!--指示器的颜色-->
+        <attr name="indicatrixColor" format="integer"></attr>
+        <!--一屏显示Item-->
+        <attr name="show_itemSize" format="integer" ></attr>
+        <!--刻度和数值的间距-->
+        <attr name="margin_cursor_data" format="dimension"></attr>
+        <!--长指针大小-->
+        <attr name="longCursor" format="dimension"></attr>
+        <!--短指针大小-->
+        <attr name="shortCursor" format="dimension"></attr>
+    </declare-styleable>
+    
+    <!-- viewpager指示器 -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsIndicatorWidthOffset" format="dimension" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsDividerWidth" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsPaddingMiddle" format="boolean" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsTabMarginLeftRight" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsTabTextSize" format="dimension" />
+        <attr name="pstsTabTextColor" format="reference" />
+        <attr name="pstsTabTextStyle" format="reference">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTabTextAllCaps" format="boolean" />
+        <attr name="pstsTabTextAlpha" format="integer" />
+        <attr name="pstsTabTextFontFamily" format="string" />
+    </declare-styleable>
+    
+    <!-- 圆角按钮属性 -->
+    <declare-styleable name="RoundButton">
+        <!-- 背景色 -->
+        <attr name="btnSolidColor" format="color"/>
+        <!-- 边框色 -->
+        <attr name="btnStrokeColor" format="color"/>
+        <!-- 边框厚度 -->
+        <attr name="btnStrokeWidth" format="dimension"/>
+        <!-- 边框虚线长度 -->
+        <attr name="btnStrokeDashWidth" format="dimension"/>
+        <!-- 边框虚线间隙 -->
+        <attr name="btnStrokeDashGap" format="dimension"/>
+        <!-- 圆角半径，stadium 表示半径为 min(height,width) / 2-->
+        <attr name="btnCornerRadius" format="dimension">
+            <enum name="stadium" value="-1"/>
+        </attr>
+        <!-- 自动计算按下(pressed)状态颜色的系数, 值为0时不自动计算 -->
+        <attr name="btnPressedRatio" format="float"/>
+    </declare-styleable>
+    
+    <declare-styleable name="ScrollableLayout">
+
+        <attr name="scrollable_maxScroll" format="dimension"/>
+        <attr name="scrollable_scrollerFlywheel" format="boolean"/>
+        <attr name="scrollable_considerIdleMillis" format="integer"/>
+        <attr name="scrollable_defaultCloseUp" format="boolean"/>
+        <attr name="scrollable_friction" format="float"/>
+
+        <attr name="scrollable_closeUpAnimationMillis" format="integer"/>
+        <attr name="scrollable_closeUpAnimatorInterpolator" format="reference"/>
+
+        <attr name="scrollable_autoMaxScroll" format="boolean"/>
+        <attr name="scrollable_autoMaxScrollViewId" format="reference"/>
+
+        <attr name="scrollable_scrollingHeaderId" format="reference"/>
+
+    </declare-styleable>
+</resources>

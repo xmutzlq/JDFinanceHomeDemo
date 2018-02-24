@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">BezierCurveBgDemo</string>
+
+    <!-- 金额格式化 -->
+    <string name="default_format">###,##0.##</string>
+    <string name="str_default_format">###,##0</string>
+    <string name="default_decimal_separator">\'</string>
+    <string name="str_decimal_separator">.</string>
+    <string name="str_money_ten_thousand_value">%s万元</string>
+    
+    <string name="bid_label">投资金额(¥)</string>
+    <string name="all_bid_label">全投</string>
+</resources>

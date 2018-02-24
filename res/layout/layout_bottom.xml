@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:paddingBottom="20dp" >
+
+    <com.king.demo.jdjr.banner.AutoScrollViewPager
+        android:id="@+id/bannerViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height"
+        android:layout_marginBottom="@dimen/banner_margin_top_bottom"
+        android:layout_marginLeft="@dimen/banner_margin_left_right"
+        android:layout_marginRight="@dimen/banner_margin_left_right"
+        android:clipChildren="false"
+        android:overScrollMode="never" />
+
+    <!-- 列表数据 -->
+
+    <com.king.demo.jdjr.ScrollDisabledListView
+        android:id="@+id/bottom_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="@color/color_e1e1e1"
+        android:dividerHeight="1px"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

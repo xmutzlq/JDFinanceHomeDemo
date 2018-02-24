@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+	
+    <com.king.demo.jdjr.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:layout_gravity="center"
+        app:pstsIndicatorColor="@color/color_6c94f2"
+        app:pstsTabTextColor="@color/bottom_txt_selector"
+        app:pstsTabTextSize="@dimen/txt_large"
+        app:pstsIndicatorHeight="@dimen/app_sliding_bar_height"
+        app:pstsIndicatorWidthOffset="@dimen/tab_line_offset"
+        app:pstsShouldExpand="true" />
+    
+    <com.king.demo.jdjr.ScrollViewDisableList 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <!-- 一定要加android:clipChildren="false",否则就无法正常显示阴影 -->
+        <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false" >
+            <com.king.demo.jdjr.CardViewPager
+		        android:id="@+id/cardViewPager"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/card_view_height"
+		        android:layout_marginBottom="@dimen/banner_margin_top_bottom"
+		        android:layout_marginLeft="@dimen/banner_margin_left_right"
+		        android:layout_marginRight="@dimen/banner_margin_left_right"
+		        android:layout_marginTop="@dimen/banner_margin_top_bottom"
+		        android:overScrollMode="never"
+        		android:clipChildren="false" />
+		    <com.king.demo.jdjr.ScrollViewPager
+		        android:id="@+id/bottomViewPager"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+        </FrameLayout>
+    </com.king.demo.jdjr.ScrollViewDisableList>
+</LinearLayout>

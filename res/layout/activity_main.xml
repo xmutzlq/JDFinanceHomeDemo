@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <!-- 背景 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:visibility="gone" >
+
+        <com.king.demo.WaveBgTextureView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- 金额输入 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_rectangle_bid_input"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/left_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bid_label"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/txt_small" />
+
+            <View
+                android:id="@+id/left_divide"
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/color_divide_line"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/toubiao_avaliblemoney"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="10000"
+                android:textColor="@color/color_ff593e"
+                android:textColorHint="@color/color_aaaaaa"
+                android:textSize="@dimen/txt_size_23" />
+
+            <ImageView
+                android:id="@+id/iv_input_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/btn_edit_input_clear"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/right_divide"
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/color_divide_line"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/right_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all_bid_label"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/txt_large" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.king.demo.SlideRuler
+        android:id="@+id/slideruler"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:dividerColor="@color/color_aebdda"
+        app:indicatrixColor="@color/color_ff593e"
+        app:longCursor="20dp"
+        app:margin_cursor_data="4dp"
+        app:min_currentValue="0"
+        app:min_unitValue="1000"
+        app:s_current_value="0"
+        app:s_max_value="20000"
+        app:s_min_value="0"
+        app:shortCursor="10dp"
+        app:textColor="@color/color_999999"
+        app:textSize="@dimen/txt_small"
+        android:visibility="gone" />
+
+    <!-- 仿京东金融首页 -->
+    <Button 
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Go"/>
+</LinearLayout>
